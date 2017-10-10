@@ -1,4 +1,4 @@
-#Funcion cipher()
+# Funcion cipher()
 
 1. Crear una funcion llamada cipher que cifre el texto ingresado  : **function cipher()**
 
@@ -22,7 +22,7 @@
 
 4. Retornar el texto cifrado : **return cifrado;**
 
-#Funcion decipher()
+# Funcion decipher()
 
 5. Crear una funcion llamada decipher que descifre el texto ingresado inicialmente: **function decipher(cifrado)**
 
