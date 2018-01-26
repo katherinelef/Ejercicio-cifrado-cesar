@@ -1,0 +1,25 @@
+body {
+  font-family:monospace;
+  background-image: url("../assets/images/fondo.png");
+}
+
+h1, p {
+  color: white;
+  text-align: center;
+  }
+
+h1 {
+  font-size: 40px;
+}
+
+p {
+  font-size: 30px;
+}
+
+input {
+  font-size: 20px;
+}
+
+button {
+  margin-top: 10px;
+}

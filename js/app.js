@@ -1,31 +1,39 @@
 // Crear una funcion llamada cipher que cifre el texto ingresado//
+let button = document.getElementById('cifrar')
+button.addEventListener("click", cipher)
+
 function cipher() {
-  var texto = prompt('Ingrese un texto');
-  var cifrado = '';
+  let texto = document.getElementById('texto').value
+  let cifrado = '';
   // el for recorrera las letras del texto a cifrar//
-  for (var i = 0; i < texto.length; i++) {
+  for (let i = 0; i < texto.length; i++) {
     if (parseInt(texto[i]) % 1 === 0) // condicionar para no ingresar numeros//
       texto = prompt('Por favor ingrese un texto sin numeros ni espacios');
-
-    var ubicacionCesar = (texto.toUpperCase().charCodeAt(i) - 65 + 33) % 26 + 65;
-    var palabraCifrada = String.fromCharCode(ubicacionCesar);
-    cifrado += palabraCifrada; // acumular las letras cifradas//
+      let ubicacionCesar = (texto.toUpperCase().charCodeAt(i) - 65 + 33) % 26 + 65;
+      let palabraCifrada = String.fromCharCode(ubicacionCesar)
+      cifrado += palabraCifrada; // acumular las letras cifradas//
   }
-  return cifrado;
+  var newParagraph = document.createElement('p');
+  var paragraphText = document.createTextNode(cifrado);
+  newParagraph.appendChild(paragraphText);
+  document.body.appendChild(newParagraph);
 }
+
+let buttonDescipher = document.getElementById('descifrar');
+buttonDescipher.addEventListener("click", descipher)
 // Crear una funcion llamada decipher que descifre el texto ingresado //
-function decipher(cifrado) {
-  alert('Palabra Cifrada: ' + cifrado);
-  var descifrado = '';
-
+function descipher() {
+  let texto = document.getElementById('texto').value;
+  let descifrado = '';
   // el for recorrera las letras del texto a descifrar//
-
-  for (var j = 0; j < cifrado.length; j++) {
-    var ubicacionDescifrado = (cifrado.charCodeAt(j) + 65 - 33) % 26 + 65;
-    var palabraDescifrada = String.fromCharCode(ubicacionDescifrado);
+  for (let j = 0; j < texto.length; j++) {
+    let ubicacionDescifrado = (texto.charCodeAt(j) + 65 - 33) % 26 + 65;
+    let palabraDescifrada = String.fromCharCode(ubicacionDescifrado);
     // acumular las letras descifradas//
     descifrado += palabraDescifrada;
   }
-  return descifrado;
+  var newParagraph = document.createElement('p');
+  var paragraphText = document.createTextNode(descifrado);
+  newParagraph.appendChild(paragraphText);
+  document.body.appendChild(newParagraph);
 }
-decipher(cipher());
