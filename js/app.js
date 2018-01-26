@@ -13,8 +13,8 @@ function cipher() {
     let palabraCifrada = String.fromCharCode(ubicacionCesar);
     cifrado += palabraCifrada; // acumular las letras cifradas//
   }
-  var newParagraph = document.createElement('p');
-  var paragraphText = document.createTextNode(cifrado);
+  let newParagraph = document.createElement('p');
+  let paragraphText = document.createTextNode(cifrado);
   newParagraph.appendChild(paragraphText);
   document.body.appendChild(newParagraph);
 }
@@ -32,8 +32,8 @@ function descipher() {
     // acumular las letras descifradas//
     descifrado += palabraDescifrada;
   }
-  var newParagraph = document.createElement('p');
-  var paragraphText = document.createTextNode(descifrado);
+  let newParagraph = document.createElement('p');
+  let paragraphText = document.createTextNode(descifrado);
   newParagraph.appendChild(paragraphText);
   document.body.appendChild(newParagraph);
 }
